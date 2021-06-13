@@ -1,0 +1,179 @@
+{
+	"info": {
+		"_postman_id": "56802539-982f-4e9e-8f8a-48e666886b61",
+		"name": "leovegas_restful",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "credit",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"playerName\": \"chris\",\r\n    \"transactionId\": \"TX05\",\r\n    \"transactionAmount\": \"1400\",\r\n    \"transactionDate\": \"2020-06-08\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9090/rest/v1/ider/wallet/credit",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"rest",
+						"v1",
+						"ider",
+						"wallet",
+						"credit"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "history",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9090/rest/v1/ider/wallet/history",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"rest",
+						"v1",
+						"ider",
+						"wallet",
+						"history"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "createplayer",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"playerName\": \"Bob\",\r\n    \"wallet\": {\r\n        \"currencyCode\": \"EU\",\r\n        \"balance\": 3500.00\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:9090/rest/v1/player",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"rest",
+						"v1",
+						"player"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getAllPlayer",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:9090/rest/v1/player/all",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"rest",
+						"v1",
+						"player",
+						"all"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getPlayerByName",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": 235,\r\n    \"file\": \"200\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:9090/rest/v1/player/chris",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"rest",
+						"v1",
+						"player",
+						"chris"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "debit",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"playerName\": \"chris\",\r\n    \"transactionId\": \"TX02\",\r\n    \"transactionAmount\": \"5400\",\r\n    \"transactionDate\": \"2020-06-07\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9090/rest/v1/ider/wallet/debit",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"rest",
+						"v1",
+						"ider",
+						"wallet",
+						"debit"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
