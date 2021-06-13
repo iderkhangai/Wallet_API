@@ -5,18 +5,21 @@ Database - H2
 
 
 Player
+
   Create player
   Find player
   Retrieve All players
 
 
 Wallet
+
   Debit transaction
   Credit transaction
   Transactin History By Player
   
   
 For-Production ready
+
   Use authorization
   Pass userId into the request 
   There can be duplicated player names in the system we should allow it but different identified ID.
